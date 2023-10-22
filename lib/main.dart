@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
-            // crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             // mainAxisSize: MainAxisSize.min,
             // // textBaseline: TextBaseline.alphabetic,
             children: <Widget>[
@@ -46,13 +46,44 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
-                  //child: Row(children: <widget> [
-                  // Icon(
-                  //   Icons.add_shopping_cart
-                  // ),
-                  // ],),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    size: 20,
                   ),
+                  title: Text(
+                    '+91 8650493577',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'OpenSans-VariableFont_wdth,wght',
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+                child: Divider(color: Colors.teal.shade200),
+              ),
+              Card(
+                  color: Colors.white,
+                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                  child: ListTile(
+                      leading: Icon(
+                        Icons.email,
+                        size: 20,
+                      ),
+                      title: Text(
+                        'jadonatul74242@gmail.com',
+                        style: TextStyle(
+                          color: Colors.teal.shade900,
+                          fontFamily: 'OpenSans-VariableFont_wdth,wght',
+                          fontSize: 18,
+                        ),
+                      )))
             ],
           ),
         ),
@@ -60,6 +91,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-// Icon(Icons.star, size: 50),
-                // Icon(Icons.star, size: 50),
-                // Icon(Icons.star, size: 50),
